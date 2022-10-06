@@ -1,0 +1,17 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<br>
+
+    <h2><center>Mike has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</center></h2>
+
+{% for blog in blogs %}
+    <center>
+    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+    <h5>{{ blog.date|date:'M d Y'|upper }}</h5>
+    <p>{{ blog.description|safe|truncatechars:100 }}</p>
+    <!-blog.description|safe - вступление в силу тегов в описании блога в панели администратора->
+    <!-blog.description|striptags - скрывает все теги из текста и не изменяет его->
+    </center>
+{% endfor %}
+{% endblock %}
