@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-47om2x*3xw=c967^---)l2!6_fks(l$gg8s*%u)p4tw@v(h7a0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['semenov4jr.pythonanywhere.com']
 
 
 # Application definition
